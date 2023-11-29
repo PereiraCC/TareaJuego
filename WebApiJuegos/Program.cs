@@ -7,6 +7,16 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();
 
+// Interfaces DataAccess
+builder.Services.AddScoped<DataAccess.Interfaces.ITipoJuegoDA, DataAccess.Clases.TipoJuegoDA>();
+
+// Interfaces BusinessLogic
+builder.Services.AddScoped<BusinessLogic.Interfaces.ITipoJuegoBL, BusinessLogic.Clases.TipoJuegoBL>();
+
+// Se realiza la inicializacion de los objetos
+Models.General.GlobalVariables.TipoJuegos = new List<Models.TipoJuego.TipoJuego>();
+Models.General.GlobalVariables.TipoJuegosFiltrados = new List<Models.TipoJuego.TipoJuego>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

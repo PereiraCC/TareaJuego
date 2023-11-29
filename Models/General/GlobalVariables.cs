@@ -8,5 +8,9 @@ namespace Models.General
 {
     public static class GlobalVariables
     {
+        public static List<Models.TipoJuego.TipoJuego> TipoJuegos { get; set; }
+
+        public static List<Models.TipoJuego.TipoJuego> TipoJuegosFiltrados { get; set; }
+
     }
 }
