@@ -38,6 +38,7 @@ namespace DataAccess.Clases
                 {
                     // Se modifica el objeto
                     GlobalVariables.Juegos[indexJuego].idTipoJuego = juego.idTipoJuego;
+                    GlobalVariables.Juegos[indexJuego].nombre = juego.nombre;
                     GlobalVariables.Juegos[indexJuego].serialNumber = juego.serialNumber;
                     GlobalVariables.Juegos[indexJuego].year = juego.year;
                     GlobalVariables.Juegos[indexJuego].casaFabricante = juego.casaFabricante;

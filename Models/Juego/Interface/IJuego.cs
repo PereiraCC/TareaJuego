@@ -12,6 +12,8 @@ namespace Models.Juego.Interface
 
         int idTipoJuego { get; set; }
 
+        string nombre { get; set; }
+
         string serialNumber { get; set; }
 
         string year { get; set; }
