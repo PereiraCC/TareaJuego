@@ -12,5 +12,9 @@ namespace Models.General
 
         public static List<Models.TipoJuego.TipoJuego> TipoJuegosFiltrados { get; set; }
 
+        public static List<Models.Juego.Juego> Juegos { get; set; }
+
+        public static List<Models.Juego.Juego> JuegosFiltrados { get; set; }
+
     }
 }

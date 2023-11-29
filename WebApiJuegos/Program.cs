@@ -9,13 +9,18 @@ builder.Services.AddControllers();
 
 // Interfaces DataAccess
 builder.Services.AddScoped<DataAccess.Interfaces.ITipoJuegoDA, DataAccess.Clases.TipoJuegoDA>();
+builder.Services.AddScoped<DataAccess.Interfaces.IJuegoDA, DataAccess.Clases.JuegoDA>();
 
 // Interfaces BusinessLogic
 builder.Services.AddScoped<BusinessLogic.Interfaces.ITipoJuegoBL, BusinessLogic.Clases.TipoJuegoBL>();
+builder.Services.AddScoped<BusinessLogic.Interfaces.IJuegoBL, BusinessLogic.Clases.JuegoBL>();
 
 // Se realiza la inicializacion de los objetos
 Models.General.GlobalVariables.TipoJuegos = new List<Models.TipoJuego.TipoJuego>();
 Models.General.GlobalVariables.TipoJuegosFiltrados = new List<Models.TipoJuego.TipoJuego>();
+
+Models.General.GlobalVariables.Juegos = new List<Models.Juego.Juego>();
+Models.General.GlobalVariables.JuegosFiltrados = new List<Models.Juego.Juego>();
 
 var app = builder.Build();
 
